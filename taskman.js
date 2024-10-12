@@ -22,7 +22,7 @@ timeBtn.addEventListener('click', () => {
         // Create a countdown span element
         const countdownSpan = document.createElement('span');
         countdownSpan.classList.add('task-countdown');
-        countdownSpan.textContent = `(${timeInput})`;
+        countdownSpan.textContent = `(${timeInput}s)`;
 
         // Append the countdown to the task
         taskItem.appendChild(countdownSpan);
@@ -36,7 +36,7 @@ timeBtn.addEventListener('click', () => {
         let timeLeft = timeInput;
         const countdownInterval = setInterval(() => {
             timeLeft--;
-            countdownSpan.textContent = `(${timeLeft})`;
+            countdownSpan.textContent = `(${timeLeft}s)`;
 
             // If time is up, strike through the task and stop the interval
             if (timeLeft <= 0) {
